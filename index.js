@@ -2,6 +2,7 @@ const express = require("express"); // Importando ExpressJS
 const app = express(); // Criando uma instância do ExpressJS
 
 app.set("view engine", "ejs");
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
     res.render("index");
