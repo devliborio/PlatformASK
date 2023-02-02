@@ -1,6 +1,7 @@
 const express = require("express"); // Importando ExpressJS
 const app = express(); // Criando uma instância no ExpressJS
 
+app.set("view engine","ejs");
 
 app.listen(2108,(erro) =>{
     if(erro){
