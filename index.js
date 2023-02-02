@@ -8,6 +8,10 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+app.get("/ask",(req,res) =>{
+    res.render("ask");
+})
+
 app.listen(2108, (erro) => {
     if (erro) {
         console.log("O servidor está com erro!")
