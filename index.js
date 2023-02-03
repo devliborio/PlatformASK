@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({extended: false})); // Decodificando os dados enviados pelo formulario para serem manipulados pelo JS
-app.use(bodyParser.json); // Permite com que a gente consiga ler dados de formularios enviados por .json
+app.use(bodyParser.json()); // Permite com que a gente consiga ler dados de formularios enviados por .json
 
 app.get("/", (req, res) => {
     res.render("index");
