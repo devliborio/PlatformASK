@@ -17,7 +17,8 @@ app.get("/ask", (req, res) => {
 });
 
 app.post("/saveask", (req, res) => {
-
+    var title = req.body.titleask;
+    var description = req.body.description
 });
 
 app.listen(2108, (erro) => {
