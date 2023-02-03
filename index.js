@@ -2,7 +2,7 @@ const express = require("express"); // Importando ExpressJS
 const app = express(); // Criando uma instância do ExpressJS
 const bodyParser = require("body-parser"); // Importando body-parser
 const conection = require("./database/conection"); // Importando conexão do Sequelize com Banco de dados
-const askModel = require("./database/Question"); // Importando model de perguntas
+const QuestionModel = require("./database/Question"); // Importando model de perguntas
 
 // Autenticação da conexão do Sequelize com o Banco de dados
 conection.authenticate().then(() => {
@@ -31,7 +31,7 @@ app.get("/ask", (req, res) => {
 app.post("/saveask", (req, res) => {
     var title = req.body.titlequestion;
     var description = req.body.description
-    askModel.create({ // Módulo responsavel por salvar a pergunta na tabela do banco de dados
+    QuestionModel.create({ // Módulo responsavel por salvar a pergunta na tabela do banco de dados
         title: title,
         description: description
     }).then(() => {
