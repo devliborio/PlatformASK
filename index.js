@@ -48,8 +48,8 @@ app.get("/question/:id", (req, res) => {
     QuestionModel.findOne({
         where: { id: id }
     }).then((question) => {
-        if(question != undefined){ // Se passar esse If siginifica que a pergunta foi encontrada
-            res.render("question",{
+        if (question != undefined) { // Se passar esse If siginifica que a pergunta foi encontrada
+            res.render("question", {
                 question: question
             });
         } else { // Se vier para cá significa que a pergunta foi encontrada
