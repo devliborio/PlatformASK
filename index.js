@@ -21,10 +21,10 @@ app.use(bodyParser.json()); // Permite com que a gente consiga ler dados de form
 
 // Rotas
 app.get("/", (req, res) => {
-    QuestionModel.findAll({ raw: true, order:[["id","DESC"]] }).then(( questions ) => { // Aqui ele basicamente está fazendo um SELECT * FROM questions e retornando isso de forma crua (Apenas os dados da pergunta) atraves do raw: true e ordenando as perguntas em ordem decrescente usando order: [['id','DESC - decrescente']] (ASC - crescente)
-        res.render("index",{
+    QuestionModel.findAll({ raw: true, order: [["id", "DESC"]] }).then((questions) => { // Aqui ele basicamente está fazendo um SELECT * FROM questions e retornando isso de forma crua (Apenas os dados da pergunta) atraves do raw: true e ordenando as perguntas em ordem decrescente usando order: [['id','DESC - decrescente']] (ASC - crescente)
+        res.render("index", {
             questions: questions
-        }); 
+        });
     });
 });
 
@@ -40,6 +40,19 @@ app.post("/saveask", (req, res) => {
         description: description
     }).then(() => {
         res.redirect("/") // Após o usuario enviar a pergunta vamos redirecionar ele para nossa pagina principal
+    })
+});
+
+app.get("/question/:id", (req, res) => {
+    var id = req.params.id;
+    QuestionModel.findOne({
+        where: { id: id }
+    }).then((question) => {
+        if(question != undefined){ // Se passar esse If siginifica que a pergunta foi encontrada
+
+        } else { // Se vier para cá significa que a pergunta foi encontrada
+            
+        }
     })
 });
 
