@@ -14,3 +14,5 @@ const Question = conection.define("questions",{
 });
 
 Question.sync({force: false}).then(() => {});
+
+module.exports = Question; // Exportando Model
