@@ -8,9 +8,13 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-app.get("/ask",(req,res) =>{
+app.get("/ask", (req, res) => {
     res.render("ask");
-})
+});
+
+app.post("/saveask", (req, res) => {
+    
+});
 
 app.listen(2108, (erro) => {
     if (erro) {
