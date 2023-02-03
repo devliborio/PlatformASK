@@ -49,7 +49,9 @@ app.get("/question/:id", (req, res) => {
         where: { id: id }
     }).then((question) => {
         if(question != undefined){ // Se passar esse If siginifica que a pergunta foi encontrada
-            res.render("question");
+            res.render("question",{
+                question: question
+            });
         } else { // Se vier para cá significa que a pergunta foi encontrada
             res.redirect("/");
         }
