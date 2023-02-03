@@ -21,7 +21,11 @@ app.use(bodyParser.json()); // Permite com que a gente consiga ler dados de form
 
 // Rotas
 app.get("/", (req, res) => {
-    res.render("index");
+    QuestionModel.findAll({ raw: true }).then(( questions ) => { // Aqui ele basicamente está fazendo um SELECT * FROM questions e retornando isso de forma crua (Apenas os dados da pergunta) atraves do raw: true
+        res.render("index",{
+            questions: questions
+        }); 
+    });
 });
 
 app.get("/ask", (req, res) => {
