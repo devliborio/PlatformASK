@@ -1,11 +1,11 @@
 const express = require("express"); // Importando ExpressJS
 const app = express(); // Criando uma instância do ExpressJS
 const bodyParser = require("body-parser"); // Importando body-parser
-const conection = require("./database/conection"); // Importando conexão do Sequelize com Banco de dados
+const connection = require("./database/conection"); // Importando conexão do Sequelize com Banco de dados
 const QuestionModel = require("./database/Question"); // Importando model de perguntas
 
 // Autenticação da conexão do Sequelize com o Banco de dados
-conection.authenticate().then(() => {
+connection.authenticate().then(() => {
     console.log("Conexão feita com o banco de dados!");
 }).catch((msgErro) => {
     console.log(msgErro);

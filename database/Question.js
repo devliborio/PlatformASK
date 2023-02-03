@@ -1,8 +1,8 @@
 const Sequelize = require("sequelize"); // Importando Sequelize
-const conection = require("./conection"); // Importando conexão com banco de dados
+const connection = require("./conection"); // Importando conexão com banco de dados
 
 // Criando uma tabela usando Sequelize
-const Question = conection.define("questions",{
+const Question = connection.define("questions",{
     title:{
         type: Sequelize.STRING,
         allowNull: false
