@@ -29,8 +29,14 @@ app.get("/ask", (req, res) => {
 });
 
 app.post("/saveask", (req, res) => {
-    var title = req.body.titleask;
+    var title = req.body.titlequestion;
     var description = req.body.description
+    askModel.create({ // Módulo responsavel por salvar a pergunta na tabela do banco de dados
+        title: title,
+        description: description
+    }).then(() => {
+        res.redirect("/") // Após o usuario enviar a pergunta vamos redirecionar ele para nossa pagina principal
+    })
 });
 
 // Servidor
