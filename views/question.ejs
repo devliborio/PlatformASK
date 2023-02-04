@@ -21,6 +21,20 @@
             <button type="submit" class="btn btn-primary">Responder</button>
             
         </form>
+        <br>
+        <br>
+        <p class="h4 text-center font-weight-bold">Respostas</p>
+        <hr>
+        <% answers.forEach(answer =>{%>
+            <br>
+           <div class="card">
+
+            <div class="card-footer">
+                <h6 class="font-weight-normal"><%= answer.id + " - " + answer.bodyAnswer%><br></h6>
+            </div>
+
+           </div> 
+        <% }) %>
     </div>
 
 </body>
