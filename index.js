@@ -63,10 +63,10 @@ app.post("/torespond", (req, res) => {
     var body = req.body.bodyAnswer;
     var idQuestion = req.body.idQuestion;
     AnswerModel.create({
-        body: body,
+        bodyAnswer: body,
         idQuestion: idQuestion
     }).then(() => {
-        res.redirect("/question" + idQuestion);
+        res.redirect("/question/"+idQuestion);
     });
 });
 
