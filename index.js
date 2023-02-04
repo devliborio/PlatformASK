@@ -50,8 +50,15 @@ app.get("/question/:id", (req, res) => {
         where: { id: id }
     }).then((question) => {
         if (question != undefined) { // Se passar esse If siginifica que a pergunta foi encontrada
-            res.render("question", {
-                question: question
+
+            AnswerModel.findAll({ // Aqui fazemos uma busca no BD por todas as respostas para aquela pergunta e ele renderiza elas se acha-la no corpo do question.ejs
+                where: { idQuestion: question.id },
+                order: [['id','DESC']]
+            }).then((answers)=>{
+                res.render("question", {
+                    question: question,
+                    answers: answers
+                });
             });
         } else { // Se vier para cá significa que a pergunta foi encontrada
             res.redirect("/");
@@ -66,7 +73,7 @@ app.post("/torespond", (req, res) => {
         bodyAnswer: body,
         idQuestion: idQuestion
     }).then(() => {
-        res.redirect("/question/"+idQuestion);
+        res.redirect("/question/" + idQuestion);
     });
 });
 
