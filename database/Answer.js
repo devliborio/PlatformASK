@@ -3,12 +3,12 @@ const connection = require("./conection"); // Importando conexão com o banco de
 
 // Criando uma tabela usando Sequelize
 const Answer = connection.define("answer", {
-    body_answer: {
+    bodyAnswer: {
         type: Sequelize.TEXT,
         allowNull: false
     },
 
-    question_id: {
+    idQuestion: {
         type: Sequelize.INTEGER,
         allowNull: false
     }
