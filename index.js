@@ -59,6 +59,17 @@ app.get("/question/:id", (req, res) => {
     });
 });
 
+app.post("/torespond", (req, res) => {
+    var body = req.body.bodyAnswer;
+    var idQuestion = req.body.idQuestion;
+    AnswerModel.create({
+        body: body,
+        idQuestion: idQuestion
+    }).then(() => {
+        res.redirect("/question" + idQuestion);
+    });
+});
+
 // Servidor
 app.listen(2108, (erro) => {
     if (erro) {
