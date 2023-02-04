@@ -15,8 +15,8 @@
         <br>
         <form action="">
             <h6 class="display-6"><label>Resposta:</label></h6>
-            <textarea name="body-answer" placeholder="Digite sua respota" class="form-control"></textarea>
-            <br>
+            <textarea name="body-answer" placeholder="Digite sua respota" class="form-control"></textarea><br>
+            <input type="hidden" name="id-question" value="<%= question.id %>">
             <button type="submit" class="btn btn-primary">Responder</button>
         </form>
     </div>
