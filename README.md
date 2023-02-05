@@ -1,4 +1,4 @@
-<h1 align="center">PlatformASK</h2>
+<b><h1 align="center">PlatformASK</h2></b>
 
 <p align="center">
     Plataforma de perguntas e respostas anônima
@@ -6,7 +6,7 @@
 
 <br>
 
-## ⚙ Demonstração do Site
+### ⚙ **Demonstração do Site**
 
 Aqui você pode ver a pagina inicial do projeto onde estão depositadas as perguntas.
 
@@ -18,7 +18,7 @@ Aqui você pode ver a pagina inicial do projeto onde estão depositadas as pergu
 
 ---
 
-## ℹ️ Como funciona o Projeto
+### ℹ️ **Como funciona o Projeto**
 
 Basicamente ao entrar no site você vera a homepage que é basicamente onde ficam todas as perguntas que foram feitas no site, e logo abaixo das perguntas no canto inferior esquerdo está o botão onde você pode cadastrar sua pergunta.
 
@@ -36,11 +36,12 @@ Bom a lógica dele funcina da seguinte forma:
 > Foi usado o EJS (view engine) para renderizar os códigos HTML no node.js e o body-parser para tratar os formulários no node.
 ---
 
-## Referencia
+### **Referencia**
+
 - [Formação Node.js](https://www.udemy.com/course/formacao-nodejs/)
 
 <br>
 
-## 🙋‍♂️ Support
+### 🙋‍♂️ **Support**
 
 💙 Se você gostou do projeto dẽ uma ⭐ e compartilhe com os amigos!
