@@ -12,7 +12,9 @@ Aqui você pode ver a pagina inicial do projeto onde estão depositadas as pergu
 
 <http://204.48.25.5/>
 
-[![Demo Site](https://raw.githubusercontent.com/devliborio/user-images/master/Img/readme_platformask.png?token=GHSAT0AAAAAAB6KUE6DS77K5P7EMMTUYVRCY7AECBQ "Demo Site")](http://204.48.25.5/)
+<div>
+    <a href="http://204.48.25.5/"><img  width= "80%" src="https://github.com/devliborio/user-images/blob/master/Img/readme_platformask.png?raw=true"/></a>
+</div>
 
 ---
 
